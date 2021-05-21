@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <button @click="btn">-1</button>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -7,7 +8,16 @@
     <router-view/>
   </div>
 </template>
-
+<script>
+export default {
+  methods: {
+    btn(){
+      this.$router.go(-1)
+    }
+  },
+  
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
